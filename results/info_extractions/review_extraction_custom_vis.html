@@ -1,0 +1,271 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Forrest Gump — The Movie Review 
+Paul LesliePaul Leslie 
+
+Today is 30 years from THAT July 6th in 1994 that Forrest Gump debuted in theaters 
+nationwide. Directed by Robert Zemeckis and starring Tom Hanks, the movie was 
+based on the 1986 novel Forrest Gump by Winston Groom. To this day Forrest is an 
+iconic fictional figure in our popular culture. He is one of the most beloved characters. 
+
+I can remember my sister Reneé taking me to see it. I was just a boy, but there was 
+something I liked about Forrest. I got the book, a paperback edition that I still have. 
+Little did I know, that years later I would myself interviewing Winston Groom in his 
+house on a very hot day in April. After our talk, he autographed that book with a 
+personal message. 
+
+The next year, I interviewed Michael Conner Humphreys, who played young Forrest 
+in the movie. That interview has become the most popular interview I ever did. 
+Maybe the book and the movie have had a bigger impact on my life than I thought. 
+Having watched the movie version I don’t know how many times, I decided to watch 
+it last night and try to put myself in the frame of mind that I was seeing it for the very 
+first time. Not so easy to do. 
+
+Forrest Gump is <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#D2E3FC;">an emotional tale</span> 
+I’d start off by saying that Forrest Gump is first and foremost an emotional tale, but 
+along the way it has adventure, action, love, heartbreak and loss. It intertwines with 
+many moments in American history. In the center of it all, the main character never 
+changes his core values. Although Forrest’s IQ is lower than most, he is nonetheless 
+steadfast. 
+
+<span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">Tom Hanks portrayal of Forrest Gump may be his most known role</span>. And it occurred 
+to me that it was <span class="lx-highlight" data-idx="2" style="background-color:#D2E3FC;">his ability to portray a person who is both wise and “not a smart 
+man,”</span> as the character describes himself. <span class="lx-highlight" data-idx="3" style="background-color:#D2E3FC;">Therein is a valuable life lesson</span>. If your 
+mind can’t wrap around what the most intelligent act would be, go with the kind of 
+wisdom your mama gave you. 
+
+The movie is told almost entirely through the reminiscing of Forrest sitting on a bench 
+at a bus stop. <span class="lx-highlight" data-idx="4" style="background-color:#D2E3FC;">Forrest’s strength as a storyteller comes down to his innocence and 
+ability to break down a story to the essentials</span>. Meeting a President is on equal footing
+&quot;&quot;&quot;
+
+**Page 2**
+&quot;&quot;&quot;
+as getting free Dr Peppers.  
+
+<span class="lx-highlight" data-idx="5" style="background-color:#D2E3FC;">The story is remarkable</span> and full 
+Screenwriter Eric Roth told an, at times, different tale from the book, but <span class="lx-highlight" data-idx="6" style="background-color:#D2E3FC;">managed to 
+inject so many events in a bit over two hours and twenty minutes</span>. We witness Forrest 
+interact with many notable events.  
+
+He gets a football scholarship from the University of Alabama where he’s coached by 
+Bear Bryant. He witnesses Alabama Governor George Wallace try to block 
+desegregation at the school. Forrest serves in an infantry division in Vietnam, meets 
+Presidents Kennedy, Johnson and Nixon. He gets thrust on stage at the anti-war march 
+at the National Mall in Washington DC, starts a shrimping business and runs multiple 
+times across the United States. There’s even more. 
+
+You meet a variety of characters throughout the movie, and some of them vary in their 
+treatment of Forrest, but he realizes that events and objects come and go. <span class="lx-highlight" data-idx="7" style="background-color:#D2E3FC;">Forrest’s 
+loyalty to his friends never wanes</span>. It’s especially true of Jenny, the girl he falls in love 
+with in grade school. And it’s true of Lt. Dan and Bubba, his closest friends he meets 
+in combat in Vietnam. He sticks with them even when they don’t deserve his 
+devotion. <span class="lx-highlight" data-idx="8" style="background-color:#D2E3FC;">Loyalty is his defining characteristic</span>. 
+
+<span class="lx-highlight" data-idx="9" style="background-color:#D2E3FC;">Forrest Gump has an incredible soundtrack and score</span> 
+Watching the movie again, I also realize <span class="lx-highlight" data-idx="10" style="background-color:#D2E3FC;">how meticulous the score and the soundtrack 
+are</span>. <span class="lx-highlight" data-idx="11" style="background-color:#D2E3FC;">They really accentuate the movie</span>. <span class="lx-highlight" data-idx="12" style="background-color:#D2E3FC;">They picked some of the greatest artists ever to 
+tell the story</span>, from Duane Eddy, Creedence Clearwater Revival, Bob Dylan, the 
+Youngbloods, Jackson Browne, Fleetwood Mac, Willie Nelson and Bob Seger. <span class="lx-highlight" data-idx="13" style="background-color:#D2E3FC;">The 
+music is all incredible</span>, and surely must have cost a bundle.  
+
+<span class="lx-highlight" data-idx="14" style="background-color:#D2E3FC;">Forrest and his story endure</span> 
+Having met Winston Groom, the man who birthed the character of Forrest, it’s hard 
+not to think of him after seeing the movie. I can’t help but think that Forrest and 
+Winston had a lot in common. Both of them were natural storytellers. Neither had any 
+pretension. Both could say without a doubt, “at least I didn’t lead no humdrum life,” 
+to quote Forrest in the book. 
+
+That’s the story of Forrest Gump and <span class="lx-highlight" data-idx="15" style="background-color:#D2E3FC;">the magic of the film</span>. He had his limitations, but 
+he did all of these things anyway. <span class="lx-highlight" data-idx="16" style="background-color:#D2E3FC;">Forrest and his story endure</span>.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="16" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/17</span> |
+          Pos <span id="posInfo">[1243-1260]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "an emotional tale", "color": "#D2E3FC", "startPos": 1243, "endPos": 1260, "beforeText": " watch \nit last night and try to put myself in the frame of mind that I was seeing it for the very \nfirst time. Not so easy to do. \n \nForrest Gump is ", "extractionText": "an emotional tale", "afterText": " \nI\u2019d start off by saying that Forrest Gump is first and foremost an emotional tale, but \nalong the way it has adventure, action, love, heartbreak and", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Forrest Gump</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">emotional tale</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "Tom Hanks portrayal of Forrest Gump may be his most known role", "color": "#D2E3FC", "startPos": 1623, "endPos": 1685, "beforeText": "n the center of it all, the main character never \nchanges his core values. Although Forrest\u2019s IQ is lower than most, he is nonetheless \nsteadfast. \n \n", "extractionText": "Tom Hanks portrayal of Forrest Gump may be his most known role", "afterText": ". And it occurred \nto me that it was his ability to portray a person who is both wise and \u201cnot a smart \nman,\u201d as the character describes himself. Ther", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Tom Hanks&#x27; portrayal of Forrest Gump</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">most known role</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "his ability to portray a person who is both wise and \u201cnot a smart man,\u201d", "color": "#D2E3FC", "startPos": 1722, "endPos": 1794, "beforeText": " lower than most, he is nonetheless \nsteadfast. \n \nTom Hanks portrayal of Forrest Gump may be his most known role. And it occurred \nto me that it was ", "extractionText": "his ability to portray a person who is both wise and \u201cnot a smart \nman,\u201d", "afterText": " as the character describes himself. Therein is a valuable life lesson. If your \nmind can\u2019t wrap around what the most intelligent act would be, go wit", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Tom Hanks&#x27; ability</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">wise and \u201cnot a smart man,\u201d</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "Therein is a valuable life lesson", "color": "#D2E3FC", "startPos": 1831, "endPos": 1864, "beforeText": "role. And it occurred \nto me that it was his ability to portray a person who is both wise and \u201cnot a smart \nman,\u201d as the character describes himself. ", "extractionText": "Therein is a valuable life lesson", "afterText": ". If your \nmind can\u2019t wrap around what the most intelligent act would be, go with the kind of \nwisdom your mama gave you. \n \nThe movie is told almost ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The portrayal</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">valuable life lesson</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "Forrest\u2019s strength as a storyteller comes down to his innocence and ability to break down a story to the essentials", "color": "#D2E3FC", "startPos": 2093, "endPos": 2209, "beforeText": "th the kind of \nwisdom your mama gave you. \n \nThe movie is told almost entirely through the reminiscing of Forrest sitting on a bench \nat a bus stop. ", "extractionText": "Forrest\u2019s strength as a storyteller comes down to his innocence and \nability to break down a story to the essentials", "afterText": ". Meeting a President is on equal footing\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nas getting free Dr Peppers.  \n \nThe story is remarkable and full \nScreenwriter Eric Roth", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Forrest&#x27;s storytelling</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">strength comes down to his innocence and ability to break down a story to the essentials</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "The story is remarkable", "color": "#D2E3FC", "startPos": 2303, "endPos": 2326, "beforeText": "nce and \nability to break down a story to the essentials. Meeting a President is on equal footing\n&quot;&quot;&quot;\n\n**Page 2**\n&quot;&quot;&quot;\nas getting free Dr Peppers.  \n \n", "extractionText": "The story is remarkable", "afterText": " and full \nScreenwriter Eric Roth told an, at times, different tale from the book, but managed to \ninject so many events in a bit over two hours and t", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The story</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">remarkable</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "managed to inject so many events in a bit over two hours and twenty minutes", "color": "#D2E3FC", "startPos": 2413, "endPos": 2489, "beforeText": "2**\n&quot;&quot;&quot;\nas getting free Dr Peppers.  \n \nThe story is remarkable and full \nScreenwriter Eric Roth told an, at times, different tale from the book, but ", "extractionText": "managed to \ninject so many events in a bit over two hours and twenty minutes", "afterText": ". We witness Forrest \ninteract with many notable events.  \n \nHe gets a football scholarship from the University of Alabama where he\u2019s coached by \nBear", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Screenwriter Eric Roth&#x27;s tale</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">managed to inject so many events</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "Forrest\u2019s loyalty to his friends never wanes", "color": "#D2E3FC", "startPos": 3182, "endPos": 3227, "beforeText": "ariety of characters throughout the movie, and some of them vary in their \ntreatment of Forrest, but he realizes that events and objects come and go. ", "extractionText": "Forrest\u2019s \nloyalty to his friends never wanes", "afterText": ". It\u2019s especially true of Jenny, the girl he falls in love \nwith in grade school. And it\u2019s true of Lt. Dan and Bubba, his closest friends he meets \nin", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Forrest&#x27;s loyalty</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">never wanes</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "Loyalty is his defining characteristic", "color": "#D2E3FC", "startPos": 3461, "endPos": 3499, "beforeText": "d it\u2019s true of Lt. Dan and Bubba, his closest friends he meets \nin combat in Vietnam. He sticks with them even when they don\u2019t deserve his \ndevotion. ", "extractionText": "Loyalty is his defining characteristic", "afterText": ". \n \nForrest Gump has an incredible soundtrack and score \nWatching the movie again, I also realize how meticulous the score and the soundtrack \nare. T", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Loyalty</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">defining characteristic</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "Forrest Gump has an incredible soundtrack and score", "color": "#D2E3FC", "startPos": 3504, "endPos": 3555, "beforeText": "st friends he meets \nin combat in Vietnam. He sticks with them even when they don\u2019t deserve his \ndevotion. Loyalty is his defining characteristic. \n \n", "extractionText": "Forrest Gump has an incredible soundtrack and score", "afterText": " \nWatching the movie again, I also realize how meticulous the score and the soundtrack \nare. They really accentuate the movie. They picked some of the", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Soundtrack and score</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">incredible</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "how meticulous the score and the soundtrack are", "color": "#D2E3FC", "startPos": 3598, "endPos": 3646, "beforeText": "s \ndevotion. Loyalty is his defining characteristic. \n \nForrest Gump has an incredible soundtrack and score \nWatching the movie again, I also realize ", "extractionText": "how meticulous the score and the soundtrack \nare", "afterText": ". They really accentuate the movie. They picked some of the greatest artists ever to \ntell the story, from Duane Eddy, Creedence Clearwater Revival, B", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Score and soundtrack</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">meticulous</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "They really accentuate the movie", "color": "#D2E3FC", "startPos": 3648, "endPos": 3680, "beforeText": "c. \n \nForrest Gump has an incredible soundtrack and score \nWatching the movie again, I also realize how meticulous the score and the soundtrack \nare. ", "extractionText": "They really accentuate the movie", "afterText": ". They picked some of the greatest artists ever to \ntell the story, from Duane Eddy, Creedence Clearwater Revival, Bob Dylan, the \nYoungbloods, Jackso", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Score and soundtrack</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">accentuate the movie</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "They picked some of the greatest artists ever to tell the story", "color": "#D2E3FC", "startPos": 3682, "endPos": 3746, "beforeText": "le soundtrack and score \nWatching the movie again, I also realize how meticulous the score and the soundtrack \nare. They really accentuate the movie. ", "extractionText": "They picked some of the greatest artists ever to \ntell the story", "afterText": ", from Duane Eddy, Creedence Clearwater Revival, Bob Dylan, the \nYoungbloods, Jackson Browne, Fleetwood Mac, Willie Nelson and Bob Seger. The \nmusic i", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Artist selection for the soundtrack</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">greatest artists ever</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "The music is all incredible", "color": "#D2E3FC", "startPos": 3884, "endPos": 3912, "beforeText": "ll the story, from Duane Eddy, Creedence Clearwater Revival, Bob Dylan, the \nYoungbloods, Jackson Browne, Fleetwood Mac, Willie Nelson and Bob Seger. ", "extractionText": "The \nmusic is all incredible", "afterText": ", and surely must have cost a bundle.  \n \nForrest and his story endure \nHaving met Winston Groom, the man who birthed the character of Forrest, it\u2019s h", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The music</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">incredible</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "Forrest and his story endure", "color": "#D2E3FC", "startPos": 3954, "endPos": 3982, "beforeText": ", the \nYoungbloods, Jackson Browne, Fleetwood Mac, Willie Nelson and Bob Seger. The \nmusic is all incredible, and surely must have cost a bundle.  \n \n", "extractionText": "Forrest and his story endure", "afterText": " \nHaving met Winston Groom, the man who birthed the character of Forrest, it\u2019s hard \nnot to think of him after seeing the movie. I can\u2019t help but thin", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Forrest and his story</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">endure</span>}</div>"}, {"index": 15, "class": "opinion_statement", "text": "the magic of the film", "color": "#D2E3FC", "startPos": 4395, "endPos": 4416, "beforeText": "ion. Both could say without a doubt, \u201cat least I didn\u2019t lead no humdrum life,\u201d \nto quote Forrest in the book. \n \nThat\u2019s the story of Forrest Gump and ", "extractionText": "the magic of the film", "afterText": ". He had his limitations, but \nhe did all of these things anyway. Forrest and his story endure.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">magic</span>}</div>"}, {"index": 16, "class": "opinion_statement", "text": "Forrest and his story endure", "color": "#D2E3FC", "startPos": 4482, "endPos": 4510, "beforeText": "e Forrest in the book. \n \nThat\u2019s the story of Forrest Gump and the magic of the film. He had his limitations, but \nhe did all of these things anyway. ", "extractionText": "Forrest and his story endure", "afterText": ".\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Forrest and his story</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">endure</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>

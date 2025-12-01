@@ -1,0 +1,53 @@
+{
+    "title": "Ratio",
+    "video_segment": "106:40 - 109:59",
+    "content_flow": [
+        {
+            "content_type": "slide_description",
+            "text": "The slide discusses the concept of ratio, emphasizing that both differences and ratios can be meaningful. It presents a table with variables like Speed and Dates, showing their values in different units (e.g., M/h, Kelvin, days). It also lists methods for analysis, including frequency distribution, mode, median, mean, range, standard deviation, and matrix operations. The slide highlights that you cannot do ratio on data with two days difference, but you can do ratio after conversion, for example, after Jesus was born. It also touches upon understanding nominal, ordinal, or interval data and the importance of original format for meaning."
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "you have two days different. You cannot do ratio on that. But when you try to convert to how many days after after Jesus born, then you can do ratio. So that is about some conversion. So to understand those, uh, nominal or ordinal or interval or ratio is not because those data only stay in that way. You need to understand the original format that actually give you that meaning. In order for you to do certain operation, you need to convert them to the correct format in order for you to do matrix operation.",
+            "timestamp": "106:42"
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "Why I want to talk in matrix operation? Because matrix operation is the one that we can really do a lot of machine learning.",
+            "timestamp": "107:25"
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "I'm sorry, it's about 10 minutes for the 40. So let's try to take a 5 minutes break. I'm sorry.",
+            "timestamp": "107:35"
+        },
+        {
+            "content_type": "slide_description",
+            "text": "The slide defines Data Sets, categorizing them into Structured data (organized in clear, predictable structures, often in rows and columns) and Unstructured data (more complex and varied, usually derived from human-generated content like text, images, videos)."
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "Data Sets. A collection of data that is organized in certain formats. Structured data. Organized in a clear, predictable structure. Often in rows and columns. Unstructured data. More complex and varied. Are usually derived from human-generated content. E.g., text, images, videos.",
+            "timestamp": "107:50"
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "I'm sorry, we need to start the session. I'm extremely sorry. Every time I always have so many thing I want to talk about. And so in the end I forget. Remind me of the breaking time. Next time I will make sure TA actually remind me. Remind me of the breaking time. Oh, I I forgot. I'm sorry.",
+            "timestamp": "107:58"
+        },
+        {
+            "content_type": "slide_description",
+            "text": "The slide revisits the concept of 'Interval' data, stating that the difference between values is meaningful and there's no absolute zero. It provides examples using Temperature (Celsius and Fahrenheit) and Dates. It reiterates how to analyze data using frequency distribution, mode, median, mean, range, standard deviation, and variance."
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "Interval. The difference between values are meaningful. No total absence of the variable. Temperature. 15 C (Celsius). 2021/10/5. 202 F (Fahrenheit). 2021/12/23. How to analyze? Frequency distribution. Mode, median, or mean. Range, standard deviation, and mean. ...matrix operation.",
+            "timestamp": "108:00"
+        },
+        {
+            "content_type": "transcript_segment",
+            "text": "Some student coming in the break, ask me why this uh Fahrenheit Celsius actually being considered as a interval and why only Kelvin actually do this one. So, uh, you you can go back to do this on your own, okay? Because right now I forget the question. So for example, right here, you have the degree and then do 15 degree and then 25 degree. And then afterward you convert them to calculate the ratio. And then ratio one utilize the example. Ratio two doing the Fahrenheit. And then the ratio three Kelvin. I guarantee you your ratio R1, R2, R3 will be different. But only R3 are meaningful.",
+            "timestamp": "108:24"
+        }
+    ]
+}
